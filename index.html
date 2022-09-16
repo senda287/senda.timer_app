@@ -2,14 +2,17 @@
 <html>
     <head>
         <mata charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
-        <p>残り時間　<span id="outputStartDate"></span> 終了時刻　<span id="outputStartTime"></span></p>
+        <p>経過時間　<span id="outputHour"></span>時間 
+            <span id="outputMin"></span>分 
+            <span id="outputSec"></span>秒 </p>
+        <p>開始時刻　<span id="outputStartTime"></span></p>
         <h1>賞金　<span id="outputSalary"></span> 円</h1>
         <div>
-            終了日<input type="date" id="inputStartDate">
-            終了時刻<input type="time" id="inputStartTime">
+            開始日<input type="date" id="inputStartDate">
+            開始時刻<input type="time" id="inputStartTime">
         </div>
         <div>
             時給<input type="number" id="inputSalary" value="0">
@@ -18,6 +21,6 @@
             <input type="button" value="表示" onclick="displayBtn()">
         </div>
         </form>
-    <script src="test.js"></script>
+    <script src="{% static 'js/test.js' %}"></script>
     </body>
 </html>
